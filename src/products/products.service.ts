@@ -8,9 +8,8 @@ export class ProductsService {
   constructor(private prisma: PrismaService) {}
 
   create(createProductDto: CreateProductDto) {
-    return this.prisma.product.create({
-      data: createProductDto,
-    });
+    console.log(createProductDto);
+    return 'ee';
   }
 
   findAll() {
@@ -22,7 +21,7 @@ export class ProductsService {
   }
 
   update(id: number, updateProductDto: UpdateProductDto) {
-    return `This action updates a #${id} product`;
+    return `This action updates a #${id} product  ${updateProductDto}`;
   }
 
   remove(id: number) {
